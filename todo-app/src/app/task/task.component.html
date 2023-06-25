@@ -1,0 +1,10 @@
+<li #list class="listClass">{{task}}
+    <div class="tools">
+        <button class="complete" (click)="completeTask(list)"><i class="fas fa-check"></i></button>
+        <button class="edit" (click)="editTask()">EDIT</button>
+        <button class="delete" (click)="deleteTask()"><i class="fas fa-times"></i></button>
+    </div>
+</li>
+
+<!--popup-->
+<app-popup [showPopup]="showPopup" [task]="task"></app-popup>

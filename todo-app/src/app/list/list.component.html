@@ -1,0 +1,9 @@
+<div class="todolist">
+    <h3>List of Works Todo:</h3>
+    <p class="error-info"></p>
+    <ul>
+        <app-task *ngFor="let task of data"
+        [task]="task">
+        </app-task>
+    </ul>
+</div>

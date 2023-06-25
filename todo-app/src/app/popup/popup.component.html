@@ -1,0 +1,9 @@
+<div class="popup" [style.display]="showPopup ? 'flex' : 'none'">
+    <h3>Edit your todo:</h3>
+    <div class="popup-body">
+        <p class="popup-info"></p>
+        <input #edit type="text" class="popup-input" placeholder="Edit your task..." value="{{task}}">
+        <button class="popup-btn accept" (click) = updateTask(edit.value)>Update</button>
+        <button class="popup-btn cancel" (click) = "cancelPopup()">Cancel</button>
+    </div>
+</div>

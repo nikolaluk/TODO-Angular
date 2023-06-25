@@ -7,4 +7,4 @@
 </li>
 
 <!--popup-->
-<app-popup [showPopup]="showPopup" [task]="task"></app-popup>
+<app-popup (dataChanged)="handleDataChange($event)" [showPopup]="showPopup" [task]="task"></app-popup>

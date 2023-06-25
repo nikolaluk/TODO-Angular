@@ -29,4 +29,8 @@ export class TaskComponent {
   editTask(){
     this.showPopup = !this.showPopup;
   }
+
+  handleDataChange(data:boolean){
+    this.showPopup = data;
+  }
 }

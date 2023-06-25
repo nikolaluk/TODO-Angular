@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { data } from '../data/seed';
 
 @Component({
@@ -9,9 +9,10 @@ import { data } from '../data/seed';
 export class PopupComponent {
   @Input() task!: string;
   @Input() showPopup!: boolean;
+  @Output() dataChanged: EventEmitter<boolean> = new EventEmitter<boolean>();
   
   cancelPopup(){
-    this.showPopup = !this.showPopup;
+    this.dataChanged.emit(!this.showPopup);
   }
 
   updateTask(value:string){

@@ -1,4 +1,7 @@
 let data:any = [];
 
+let showPopup = false;
+let dataToShow = '';
 
-export { data };
+
+export { data,showPopup,dataToShow };
